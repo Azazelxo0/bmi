@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>BMI</title>
+    <link rel="shortcut icon"
+        href="https://cdn2.iconfinder.com/data/icons/men-women-health-wildberry-vol-1/256/BMI_Calculator-512.png"
+        type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <div id="bar">
+        <img src="https://cdn2.iconfinder.com/data/icons/men-women-health-wildberry-vol-1/256/BMI_Calculator-512.png"
+            alt="" style="margin-left: 20px;">
+        <h2 style="margin-top: 10px; color: orange;">BMI Calculator </h2>
+        <h5 style="margin-top: 18px; color: rgb(230, 195, 130); margin-left: 300px;">About</h5>
+        <h5 style="margin-top: 18px; color:rgb(230, 195, 130) ; margin-left: 30px;">Fitness and Health</h5>
+        <h5 style="margin-top: 18px; color: rgb(230, 195, 130); margin-left: 30px;">Risk</h5>
+
+
+    </div>
+
+    <div id="con">
+        <div id="Calculator">
+            <div>
+                <h2 style="margin-left: 90px; margin-top: 10px;">BMI Calculator</h2>
+
+            </div>
+            <form action="">
+                <div id="gender">
+                    <h4 style="margin-left: 10px;">Gender: </h4>
+                    <input type="radio" name="gender" id="" style="margin-left: 50px;">
+                    <h5 style="margin-left: 10px; margin-top: 3px;">Male</h5>
+                    <input type="radio" name="gender" id="" style="margin-left: 20px;">
+                    <h5 style="margin-left: 10px; margin-top: 4px;">Female</h5>
+
+
+                </div>
+                <div id="weight">
+                    <label for="" style="margin-left: 10px; ">
+                        <h5>Weight:</h5>
+                    </label>
+                    <input type="number" style="margin-left: 20px; width: 250px;" id="userweight">
+
+                </div>
+                <div id="height">
+                    <label for="" style="margin-left: 10px; ">
+                        <h5>Height:</h5>
+                    </label>
+                    <input type="number" style="margin-left: 23px; width: 250px;" id="userheight">
+
+                </div>
+
+                <div id="button">
+                    <button type="button" class="btn btn-success" style="height: 100%; width: 150px;"
+                        onclick="reset()">RESET</button>
+                    <button type="button" class="btn btn-warning" style="height: 100%; width: 150px;"
+                        onclick="calculate()">CALCULATE</button>
+
+                </div>
+                <div id="output">
+                    <h4>Your BMI is:</h4>
+
+                    <p style="font-size: xx-large;" id="bmi"></p>
+                    <h5 id="xe"></h5>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+    <div id="info" class="container" >
+        <p>
+            The Body Mass Index (BMI) Calculator can be used to calculate BMI value
+            and corresponding weight status while taking age into consideration. Use
+            the "Metric Units" tab for the International System of Units or the
+            "Other Units" tab to convert units into either US or metric units. Note
+            that the calculator also computes the Ponderal Index in addition to BMI,
+            both of which are discussed below in detail.
+          </p>
+          <br>
+          <h3>BMI introduction</h3>
+          <p>
+            BMI is a measurement of a person's leanness or corpulence based on their
+            height and weight, and is intended to quantify tissue mass. It is widely
+            used as a general indicator of whether a person has a healthy body
+            weight for their height. Specifically, the value obtained from the
+            calculation of BMI is used to categorize whether a person is
+            underweight, normal weight, overweight, or obese depending on what range
+            the value falls between. These ranges of BMI vary based on factors such
+            as region and age, and are sometimes further divided into subcategories
+            such as severely underweight or very severely obese. Being overweight or
+            underweight can have significant health effects, so while BMI is an
+            imperfect measure of healthy body weight, it is a useful indicator of
+            whether any additional testing or action is required. Refer to the table
+            below to see the different categories based on BMI that are used by the
+            calculator.
+          </p>
+          <br>
+          <h3>BMI table for adults</h3>
+          <p>
+            This is the World Health Organization's (WHO) recommended body weight
+            based on BMI values for adults. It is used for both men and women, age
+            20 or older.
+          </p>
+          <br>
+          <h3>BMI chart for adults</h3>
+          <p>
+            This is a graph of BMI categories based on the World Health Organization
+            data. The dashed lines represent subdivisions within a major
+            categorization.
+          </p>
+          <br>
+          <img src="//d26tpo4cm8sb6k.cloudfront.net/img/bmi-chart.gif" width="529" height="441" class="scaleimg" alt="BMI categories">
+          <br>
+          <h3>BMI table for children and teens, age 2-20</h3>
+          <p>
+            The Centers for Disease Control and Prevention (CDC) recommends BMI
+            categorization for children and teens between age 2 and 20.
+          </p>
+
+          <h3>Risks associated with being overweight</h3>
+          <p>
+            Being overweight increases the risk of a number of serious diseases and
+            health conditions. Below is a list of said risks, according to the
+            Centers for Disease Control and Prevention (CDC):
+          </p>
+          <br>
+          <ul>
+            <li>High blood pressure</li>
+            <li>
+              Higher levels of LDL cholesterol, which is widely considered "bad
+              cholesterol," lower levels of HDL cholesterol, considered to be good
+              cholesterol in moderation, and high levels of triglycerides
+            </li>
+            <li>Type II diabetes</li>
+            <li>Coronary heart disease</li>
+            <li>Stroke</li>
+            <li>Gallbladder disease</li>
+            <li>
+              Osteoarthritis, a type of joint disease caused by breakdown of joint
+              cartilage
+            </li>
+            <li>Sleep apnea and breathing problems</li>
+            <li>
+              Certain cancers (endometrial, breast, colon, kidney, gallbladder,
+              liver)
+            </li>
+            <li>Low quality of life</li>
+            <li>
+              Mental illnesses such as clinical depression, anxiety, and others
+            </li>
+            <li>Body pains and difficulty with certain physical functions</li>
+            <li>
+              Generally, an increased risk of mortality compared to those with a
+              healthy BMI
+            </li>
+          </ul>
+          <br>
+          <footer class="text-center bg-body-tertiary">
+            
+            <div class="container pt-4 " style="background-color:wheat ;">
+             
+              <section class="mb-4">
+                
+                <a data-mdb-ripple-init="" class="btn btn-link btn-floating btn-lg text-body m-1" href="#!" role="button" data-mdb-ripple-color="dark"><i class="fab fa-facebook-f"></i></a>
+      
+               
+                <a data-mdb-ripple-init="" class="btn btn-link btn-floating btn-lg text-body m-1" href="#!" role="button" data-mdb-ripple-color="dark"><i class="fab fa-twitter"></i></a>
+      
+                
+                <a data-mdb-ripple-init="" class="btn btn-link btn-floating btn-lg text-body m-1" href="#!" role="button" data-mdb-ripple-color="dark"><i class="fab fa-google"></i></a>
+      
+                <a data-mdb-ripple-init="" class="btn btn-link btn-floating btn-lg text-body m-1" href="#!" role="button" data-mdb-ripple-color="dark"><i class="fab fa-instagram"></i></a>
+      
+               
+                <a data-mdb-ripple-init="" class="btn btn-link btn-floating btn-lg text-body m-1" href="#!" role="button" data-mdb-ripple-color="dark"><i class="fab fa-linkedin"></i></a>
+                
+                <a data-mdb-ripple-init="" class="btn btn-link btn-floating btn-lg text-body m-1" href="#!" role="button" data-mdb-ripple-color="dark"><i class="fab fa-github"></i></a>
+              </section>
+              
+            </div>
+            
+      
+           
+            <div class="text-center p-3" style="background-color: rgba(123, 123, 123, 0.05)">
+              © 2024Copyright
+            </div>
+            
+          </footer>
+
+
+
+    </div>
+
+</body>
+<script>
+    function reset() {
+        userheight.value = '';
+        userweight.value = '';
+
+
+
+    }
+    function calculate() {
+        let res = (userweight.value / (userheight.value) ** 2) * 10000;
+        result = res.toFixed(2)
+        console.log(result);
+        bmi.innerHTML = result;
+
+      if(userweight.value=='' || userheight.value==''){
+        alert('Enter valid value')
+      }
+      else{
+        if (result <= 18.5) {
+          xe.innerHTML = 'Under Weight'
+        }
+        else if (result >= 19 && result <= 24) {
+            xe.innerHTML = 'Normal Weight'
+        }
+        else {
+            xe.innerHTML = 'Over Weight'
+        }
+      }
+    }
+</script>
+
+</html>
